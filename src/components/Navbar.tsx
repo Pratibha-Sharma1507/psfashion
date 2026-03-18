@@ -7,8 +7,17 @@ export default function Navbar() {
   const [cartCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Collections", href: "/collections" },
+    { name: "Custom Design", href: "/custom-designs" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+      
       {/* Decorative sparkle dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <span className="absolute top-3 left-[12%] w-1 h-1 rounded-full bg-[#C9A84C] opacity-60"></span>
@@ -19,6 +28,7 @@ export default function Navbar() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
         {/* Logo */}
         <Link href="/" className="flex flex-col items-center leading-none">
           <span
@@ -32,6 +42,7 @@ export default function Navbar() {
           >
             PS
           </span>
+
           <div className="flex flex-col items-center -mt-0.5">
             <span
               className="text-[9px] font-bold tracking-[0.25em] text-white uppercase"
@@ -39,6 +50,7 @@ export default function Navbar() {
             >
               Fashion
             </span>
+
             <span
               className="text-[7px] font-normal tracking-[0.35em] text-white uppercase"
               style={{ fontFamily: "Georgia, serif", letterSpacing: "0.4em" }}
@@ -48,25 +60,25 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Nav Links */}
+        {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
-          {["Home", "Collections", "Custom Design", "About", "Contact"].map(
-            (item) => (
-              <li key={item}>
-                <Link
-                  href="#"
-                  className="text-sm text-white/90 hover:text-[#C9A84C] transition-colors duration-200 font-light tracking-wide"
-                  style={{ fontFamily: "Georgia, serif" }}
-                >
-                  {item}
-                </Link>
-              </li>
-            )
-          )}
+          {navLinks.map((item) => (
+            <li key={item.name}>
+              <Link
+                href={item.href}
+                className="text-sm text-white/90 hover:text-[#C9A84C] transition-colors duration-200 font-light tracking-wide"
+                style={{ fontFamily: "Georgia, serif" }}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
 
-        {/* Cart Icon */}
+        {/* Cart + Mobile menu */}
         <div className="flex items-center gap-4">
+
+          {/* Cart Icon */}
           <button className="relative text-white hover:text-[#C9A84C] transition-colors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,6 +94,7 @@ export default function Navbar() {
                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13M7 13H5.4M10 21a1 1 0 100-2 1 1 0 000 2zm7 0a1 1 0 100-2 1 1 0 000 2z"
               />
             </svg>
+
             {cartCount > 0 && (
               <span className="absolute -top-1.5 -right-1.5 bg-[#C9A84C] text-black text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
                 {cartCount}
@@ -89,7 +102,7 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -120,23 +133,21 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="md:hidden bg-black/90 border-t border-[#C9A84C]/20 px-6 py-4">
           <ul className="flex flex-col gap-4">
-            {["Home", "Collections", "Custom Design", "About", "Contact"].map(
-              (item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/90 hover:text-[#C9A84C] transition-colors duration-200"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item}
-                  </Link>
-                </li>
-              )
-            )}
+            {navLinks.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="text-sm text-white/90 hover:text-[#C9A84C]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       )}
