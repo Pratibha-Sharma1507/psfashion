@@ -100,7 +100,7 @@ export default function AboutPage() {
       </header>
 
       {/* ── Hero ── */}
-      <section className="relative pt-[61px] overflow-hidden">
+      <section className="relative overflow-hidden">
         {/* Background texture lines */}
         <div className="absolute inset-0 pointer-events-none" style={{
           backgroundImage: "repeating-linear-gradient(90deg, rgba(201,168,76,0.03) 0px, rgba(201,168,76,0.03) 1px, transparent 1px, transparent 80px)",
@@ -133,7 +133,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-20">
             <div className="md:col-span-3 space-y-5">
               <p className="text-stone-200 text-lg font-light leading-relaxed" style={{ fontFamily: "'Palatino Linotype', serif" }}>
-                "Fashion is not just clothing — it is the language a woman speaks before she says a word."
+                &ldquo;Fashion is not just clothing — it is the language a woman speaks before she says a word.&rdquo;
               </p>
               <p className="text-stone-400 text-sm leading-loose">
                 PS Fashion Designer was born from a single, unwavering belief: every woman deserves to be dressed in something made entirely for her. Not off a rack. Not mass-produced. But conceived, designed, and crafted with her alone in mind.
@@ -143,7 +143,7 @@ export default function AboutPage() {
               </p>
               <div className="flex items-center gap-3 pt-2">
                 <div className="h-px w-10 bg-amber-600/50" />
-                <span className="text-[10px] tracking-[0.4em] uppercase text-amber-600">Indore, Madhya Pradesh</span>
+                <span className="text-[10px] tracking-[0.4em] uppercase text-amber-600">Bhopal, Madhya Pradesh</span>
               </div>
             </div>
 
@@ -363,7 +363,7 @@ export default function AboutPage() {
                 Ready to wear your story?
               </h2>
               <p className="text-stone-500 mt-1.5 text-sm max-w-sm leading-relaxed">
-                Let's create something exclusively for you — one stitch at a time.
+                Let&apos;s create something exclusively for you — one stitch at a time.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">

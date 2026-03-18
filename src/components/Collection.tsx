@@ -57,7 +57,7 @@ const collections = [
     color: "from-teal-900/60 to-stone-900/90",
     accent: "#C9A84C",
     description: "Flowing silhouettes kissed by the warmth of far-off shores.",
-    image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSqbxdwBy5dM3FEPAETuUX9tTWoCUfY6MNTQ6jVw5CFhjp4nMtnqk_CxhnHbQHzA7oExG0UNkVkqwVzQGup7R6ijtSylxDYhuRCVWfKggZaRRJVYN4NE45K&usqp=CAc",
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const collections = [
     color: "from-stone-900/70 to-zinc-900/90",
     accent: "#D4AF37",
     description: "Tailored excellence for the woman who commands every space.",
-    image: "https://images.unsplash.com/photo-1548549557-dbe9946621da?w=600&q=80",
+    image: "https://elchic.in/cdn/shop/files/1_bf17a323-eb2e-4f99-91f1-9a5328bdc663_765x.progressive.jpg?v=1753435936",
   },
 ];
 
@@ -246,7 +246,7 @@ export default function CollectionsPage() {
       </header>
 
       {/* ── Page Title (tight, no extra space) ── */}
-      <section className="pt-[61px] px-16">
+      <section className="px-16">
         <div className="max-w-6xl mx-auto">
 
           {/* Breadcrumb — flush to navbar */}
@@ -411,7 +411,7 @@ export default function CollectionsPage() {
               Bespoke Experience
             </p>
             <h2 className="text-2xl md:text-3xl font-light">
-              Can't find what you're imagining?
+              Can&apos;t find what you&apos;re imagining?
             </h2>
             <p className="text-stone-500 mt-1.5 text-sm max-w-sm leading-relaxed">
               Your vision, our artistry — every dream deserves an exclusive canvas.

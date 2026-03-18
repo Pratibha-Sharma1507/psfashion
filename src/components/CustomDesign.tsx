@@ -155,7 +155,7 @@ export default function CustomDesignPage() {
       </header>
 
       {/* ── Page Header ── */}
-      <section className="pt-[61px] px-8 md:px-16">
+      <section className="px-8 md:px-16">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 pt-2 mb-1">
             <span className="text-[10px] tracking-[0.4em] uppercase text-stone-600">Home</span>
@@ -173,7 +173,7 @@ export default function CustomDesignPage() {
               </em>
             </h1>
             <p className="text-stone-500 text-[13px] max-w-xs leading-relaxed">
-              Tell us your dream — we'll craft it exclusively for you.
+              Tell us your dream — we&apos;ll craft it exclusively for you.
             </p>
           </div>
         </div>

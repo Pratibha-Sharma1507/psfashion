@@ -107,7 +107,7 @@ export default function ContactPage() {
             </em>
           </h2>
           <p className="text-stone-400 text-sm leading-relaxed mb-8">
-            We've received your message and will get back to you within{" "}
+            We&apos;ve received your message and will get back to you within{" "}
             <span className="text-stone-300">24 hours</span>. Looking forward to connecting with you.
           </p>
           <Link
@@ -203,7 +203,7 @@ export default function ContactPage() {
       </header>
 
       {/* ── Page Header ── */}
-      <section className="pt-[61px] px-8 md:px-16">
+      <section className="px-8 md:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 pt-2 mb-1">
             <span className="text-[10px] tracking-[0.4em] uppercase text-stone-600">Home</span>
